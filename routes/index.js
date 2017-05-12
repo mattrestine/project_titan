@@ -1,12 +1,16 @@
 // SETUP
 var User     = require('../models/user/users'),
-    router   = express.Router(),
     express  = require('express'),
     passport = require('passport');
+var router = express.Router();
 // ROUTES
-// Index Route
+// Landing Route
 router.get('/', function(req, res) {
     res.render('landing');
+});
+// Home Route
+router.get('/home', function(req, res) {
+    res.render('home');
 });
 // Register Route
 router.get('/register', function(req, res) {
@@ -25,3 +29,21 @@ router.post('/register', function(req, res) {
         });
     });
 });
+// Login Route
+router.get('/login', function(req, res) {
+    res.render('login');
+});
+router.post('/login', passport.authenticate('local', {
+    successRedirect: '/home',
+    failureRedirect: '/login'
+}), function(req, res) {
+    /*blank*/
+});
+// Logout Route
+router.get('/logout', function(req, res) {
+    req.logout();
+    req.flash('success', 'You have logged out.');
+    res.redirect('/home');
+});
+//Module Export
+module.exports = router;

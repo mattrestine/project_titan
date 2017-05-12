@@ -1,0 +1,21 @@
+body {
+    background-color: #545454;
+}
+/* Landing Styles */
+.jumbotron {
+    margin-top: 100px;
+}
+.jumbotron h1 {
+    line-height: 25px;
+}
+.jumbotron h3 {
+    padding-left: 50px;
+}
+.jumbotron button {
+    margin-left: 50px;
+}
+/* Home Styles */
+.navbar {
+    border-radius: 0;
+}
+/* Register Styles */

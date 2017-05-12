@@ -9,13 +9,14 @@ var User           = require('./models/user/users'),
     methodOverride = require('method-override');
 // SETUP
 // Mongoose
-mongoose.connect('mongodb://loclhost/dbc');
+mongoose.connect('mongodb://localhost/dbc');
 // Variables
 var app = express();
 var indexRoute = require('./routes/index');
 // Set and Use
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/bower_components'));
+app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
 app.use(flash());
 app.set('view engine', 'ejs');
