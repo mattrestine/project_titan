@@ -1,0 +1,20 @@
+{
+  "name": "project_titan",
+  "description": "A social media for Deaf business",
+  "main": "server.js",
+  "authors": [
+    "Matthew Restine"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mattrestine/project_titan",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
