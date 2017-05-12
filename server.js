@@ -10,6 +10,7 @@ var User           = require('./models/user/users'),
 // SETUP
 // Mongoose
 mongoose.connect('mongodb://localhost/dbc');
+mongoose.Promise = global.Promise;
 // Variables
 var app = express();
 var indexRoute = require('./routes/index');

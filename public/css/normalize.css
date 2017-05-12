@@ -1,8 +1,10 @@
 body {
     background-color: #545454;
+    color: #FFF;
 }
 /* Landing Styles */
 .jumbotron {
+    color: #000;
     margin-top: 100px;
 }
 .jumbotron h1 {
@@ -19,3 +21,16 @@ body {
     border-radius: 0;
 }
 /* Register Styles */
+#registerHeader {
+    font-weight: bold;
+}
+#registerForm {
+    max-width: 500px;
+}
+/* Login Styles */
+#loginHeader {
+    font-weight: bold;
+}
+#loginForm {
+    max-width: 500px;
+}

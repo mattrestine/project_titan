@@ -1,4 +1,22 @@
 <% include partials/header %>
     <% include partials/nav %>
-
+        <div class='container'>
+            <div id='registerHeader'>
+                <h1>Register</h1>
+                <p>Join the deaf business network champions!</p>
+            </div>
+            <div id='registerForm'>
+                <form action='/register' method='POST'>
+                    <div class='form-group'>
+                        <label for='user'>Username</label>
+                        <input class='form-control' id='user' type='text' name='username' placeholder='username' pattern='.{8,16}' required title='8 character minimum to 16 maximum characters'>
+                    </div>
+                    <div class='form-group'>
+                        <label for='pass'>Password</label>
+                        <input class='form-control' id='pass' type='password' name='password' placeholder='password' pattern='.{8,16}' required title='8 character minimum to 16 maximum characters'>
+                    </div>
+                    <button class='btn btn-success'>Register</button>
+                </form>
+            </div>
+        </div>       
 <% include partials/footer %>
