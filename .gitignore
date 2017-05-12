@@ -1,3 +1,5 @@
 ***Custom VScode Files***
 .vscode/*
 node_modules/*
+***Custom MongoDB Files***
+mongodb.cfg
