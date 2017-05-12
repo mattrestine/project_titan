@@ -5,7 +5,16 @@ var mongoose = require('mongoose'),
 var userSchema = new mongoose.Schema(
     {
         username: String,
-        password: String
+        password: String,
+        firstname: String,
+        lastname: String,
+        hasBusiness: false,
+        subs: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Business'
+            }
+        ]
     }
 );
 // PASSPORT

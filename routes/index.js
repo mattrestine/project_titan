@@ -17,14 +17,14 @@ router.get('/register', function(req, res) {
     res.render('register');
 });
 router.post('/register', function(req, res) {
-    var newUser = new User({username: req.body.username});
+    var newUser = new User({username:req.body.username, firstname:req.body.firstname, lastname:req.body.lastname});
     User.register(newUser, req.body.password, function(err, user) {
         if(err) {
             req.flash('error', err.message);
             return res.redirect('/register');
         }
         passport.authenticate('local')(req, res, function() {
-            req.flash('success', 'Welcome to DBC, ' + user.username);
+            req.flash('success', 'Welcome to DBC, ' + user.firstname);
             res.redirect('/home');
         });
     });
