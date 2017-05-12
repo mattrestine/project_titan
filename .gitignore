@@ -1,2 +1,3 @@
 ***Custom VScode Files***
 .vscode/*
+node_modules/*
