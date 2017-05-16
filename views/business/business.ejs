@@ -1,10 +1,10 @@
-<% ../partials/header %>
-    <% ..partials/nav %>
+<% include ../partials/header %>
+    <% include ../partials/nav %>
         <div class='container'>
             <div class='jumbotron'>
                 <h2>Business Directory</h2>
                 <h4>(working title)</h4>
-                <button class='btn btn-xs btn-success'>Add a business</button>
+                <a href='/business/new'><button class='btn btn-xs btn-success'>Add a business</button></a>
             </div>
             <% data.forEach(function(bus) { %>
                 <div class='col-xs-12 col-md-6 col-lg-3'>
@@ -26,4 +26,4 @@
                 </div>
             <% }) %>
         </div>
-<% ../partials/footer %>
+<% include ../partials/footer %>
