@@ -20,6 +20,22 @@ body {
 .navbar {
     border-radius: 0;
 }
+#homeHeader {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+#homeBody {
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    padding: 10px;
+    /* remove this style */
+    text-align: center;
+    height: 700px;
+}
+#homeBody p {
+    padding-top: 340px;
+}
 /* Register Styles */
 #registerHeader {
     font-weight: bold;
