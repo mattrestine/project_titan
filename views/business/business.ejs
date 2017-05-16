@@ -6,14 +6,14 @@
                 <h4>(working title)</h4>
                 <a href='/business/new'><button class='btn btn-xs btn-success'>Add a business</button></a>
             </div>
+            <div class='col-xs-12 col-md-6 col-lg-3'>
             <% data.forEach(function(bus) { %>
-                <div class='col-xs-12 col-md-6 col-lg-3'>
                     <div id='businessLogo'>
                         <img class='thumbnail' src='<%= bus.logo %>'>
                     </div>
                     <div id='businessHeader'>
                         <h2><%= bus.name %></h2>
-                        <h4><%= currentUser.firstname %> <%= currentUser.lastname %></h4>
+                        <h4>Owner: <%= currentUser.firstname %> <%= currentUser.lastname %></h4>
                     </div>
                     <div id='businessBody'>
                         <h4>Website: <a href='<%= bus.url %>'><%= bus.name %></a></h4>
@@ -24,7 +24,7 @@
                     <div id='businessFooter'>
                         <p><em>created:</em> <i><%= bus.created.toDateString() %></i></p>
                     </div>
-                </div>
-            <% }) %>
+                <% }) %>
+            </div>
         </div>
 <% include ../partials/footer %>
