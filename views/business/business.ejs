@@ -1,0 +1,29 @@
+<% ../partials/header %>
+    <% ..partials/nav %>
+        <div class='container'>
+            <div class='jumbotron'>
+                <h2>Business Directory</h2>
+                <h4>(working title)</h4>
+                <button class='btn btn-xs btn-success'>Add a business</button>
+            </div>
+            <% data.forEach(function(bus) { %>
+                <div class='col-xs-12 col-md-6 col-lg-3'>
+                    <div id='businessLogo'>
+                        <img class='thumbnail' src='<%= bus.logo %>'>
+                    </div>
+                    <div id='businessHeader'>
+                        <h2><%= bus.name %></h2>
+                    </div>
+                    <div id='businessBody'>
+                        <h4>Website: <a href='<%= bus.url %>'><%= bus.name %></a></h4>
+                        <p> <%= bus.desc.substring(0,127) %> </p>
+                        <!--<h4>Video</h4>
+                        <iframe width="280" src="<%= bus.video %>" frameborder="0" allowfullscreen></iframe>-->
+                    </div>
+                    <div id='businessFooter'>
+                        <p><em>created:</em> <i><%= bus.created.toDateString() %></i></p>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+<% ../partials/footer %>
