@@ -6,23 +6,25 @@
                 <h4>(working title)</h4>
                 <a href='/business/new'><button class='btn btn-xs btn-success'>Add a business</button></a>
             </div>
-            <div class='col-xs-12 col-md-6 col-lg-3'>
-            <% data.forEach(function(bus) { %>
-                    <div id='businessLogo'>
-                        <img class='thumbnail' src='<%= bus.logo %>'>
-                    </div>
-                    <div id='businessHeader'>
-                        <h2><%= bus.bname %></h2>
-                        <h4>Owner: <%= bus.owner.firstname %> <%= bus.owner.lastname %></h4>
-                    </div>
-                    <div id='businessBody'>
-                        <h4>Website: <a href='<%= bus.url %>'><%= bus.bname %></a></h4>
-                        <p> <%= bus.desc.substring(0,127) %> </p>
-                        <!--<h4>Video</h4>
-                        <iframe width="280" src="<%= bus.video %>" frameborder="0" allowfullscreen></iframe>-->
-                    </div>
-                    <div id='businessFooter'>
-                        <p><em>created:</em> <i><%= bus.created.toDateString() %></i></p>
+            <div class="row">
+                <% data.forEach(function(bus) { %>
+                    <div class='col-xs-12 col-md-6 col-lg-3'>
+                        <div id='businessLogo'>
+                            <img class='thumbnail' src='<%= bus.logo %>'>
+                        </div>
+                        <div id='businessHeader'>
+                            <h2><%= bus.bname %></h2>
+                            <h4>Owner: <%= bus.owner.firstname %> <%= bus.owner.lastname %></h4>
+                        </div>
+                        <div id='businessBody'>
+                            <h4>Website: <a href='<%= bus.url %>'><%= bus.bname %></a></h4>
+                            <p> <%= bus.desc.substring(0,127) %> </p>
+                            <!--<h4>Video</h4>
+                            <iframe width="280" src="<%= bus.video %>" frameborder="0" allowfullscreen></iframe>-->
+                        </div>
+                        <div id='businessFooter'>
+                            <p><em>created:</em> <i><%= bus.created.toDateString() %></i></p>
+                        </div>
                     </div>
                 <% }) %>
             </div>
