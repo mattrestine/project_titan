@@ -1,7 +1,7 @@
 // SETUP
 var mongoose = require('mongoose');
 // SCHEMA
-var locationSchema = new mongoose.Schema(
+var addressSchema = new mongoose.Schema(
     {
         street: String,
         city: String,
@@ -10,4 +10,4 @@ var locationSchema = new mongoose.Schema(
     }
 );
 // MODULE EXPORTS
-module.exports = mongoose.model('Location', locationSchema);
+module.exports = mongoose.model('Address', addressSchema);
