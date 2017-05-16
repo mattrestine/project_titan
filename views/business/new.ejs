@@ -1,0 +1,34 @@
+<% ../partials/header %>
+    <% ../partials/nav %>
+        <div class='container'>
+            <div id="newBusinessHeader">
+                <h2>Register A New Business</h2>
+                <p>Add business to gain new customer/client and interact with current customers/clients</p>
+            </div>
+            <div id='newBusinessForm'>
+                <form action='/business' method='POST'>
+                    <div class='form-group'>
+                        <label for='busName'>Name of Business</label>
+                        <input class='form-control' id='busName' type='text' name='username' placeholder='username' pattern='.{3}' required title='3 characters or more...'>
+                    </div>
+                    <div class='form-group'>
+                        <label for='busLogo'>Logo (use external image link)</label>
+                        <input class='form-control' id='busLogo' type='text' name='logo' placeholder='https://linktoimage.com/image.jpg' pattern='.{3}' required>
+                    </div>
+                    <div class='form-group'>
+                        <label for='busVideo'>YouTube Video</label>
+                        <input class='form-control' id='busVideo' type='text' name='video' placeholder='https://youtube.com/id' pattern='.{3}' required>
+                    </div>
+                    <div class='form-group'>
+                        <label for='busURL'>Business Website</label>
+                        <input class='form-control' id='busURL' type='url' name='url' placeholder='yourwebsite.com' pattern='.{8}' required>
+                    </div>
+                    <div class='form-group'>
+                        <label for='busURL'>Business Website</label>
+                        <textarea class="form-control" rows="3" name='desc'>Business Description</textarea>
+                    </div>
+                    <button class='btn btn-success'>Register</button>
+                </form>
+            </div>
+        </div>
+<% ../partials/footer %>

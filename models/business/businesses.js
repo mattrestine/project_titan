@@ -8,6 +8,14 @@ var businessSchema = new mongoose.Schema(
         desc: String,
         video: String,
         url: String,
+        owner: {
+            id: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'User'
+            },
+            firstname: String,
+            lastname: String
+        },
         location: [
             {
                 type: mongoose.Schema.Types.ObjectId,
