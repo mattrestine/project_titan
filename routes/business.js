@@ -10,7 +10,7 @@ var express  = require('express'),
 var router = express.Router();
 // ROUTES
 // Business Index
-router.get('/business', function(req, res) {
+router.get('/', function(req, res) {
     Business.find({}, function(err, data) {
         if(err) {
             req.flash('error', err.message);
@@ -20,11 +20,11 @@ router.get('/business', function(req, res) {
     });
 });
 // Register new business
-router.get('/business/new', middleware.isLoggedIn, function(req, res) {
+router.get('/new', middleware.isLoggedIn, function(req, res) {
     res.render('new');
 });
 // Save new business to db
-router.post('/business', middleware.isLoggedIn, function(req, res) {
+router.post('/', middleware.isLoggedIn, function(req, res) {
     var newData = {
         name: req.body.name,
         logo: req.body.logo,
