@@ -31,7 +31,11 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
         desc: req.body.desc,
         video: req.body.video,
         url: req.body.url,
-        owner: req.user
+        owner: {
+            id:req.user._id,
+            firstname: req.user.firstname,
+            lastname: req.user.lastname
+        } 
     };
     Business.create(newData, function(err, data) {
         if(err) {
