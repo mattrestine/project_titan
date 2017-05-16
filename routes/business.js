@@ -16,12 +16,12 @@ router.get('/', function(req, res) {
             req.flash('error', err.message);
             res.redirect('/');
         }
-        res.render('business', {data:data, currentUser:req.user});
+        res.render('business/business', {data:data, currentUser:req.user});
     });
 });
 // Register new business
 router.get('/new', middleware.isLoggedIn, function(req, res) {
-    res.render('new');
+    res.render('business/new');
 });
 // Save new business to db
 router.post('/', middleware.isLoggedIn, function(req, res) {
