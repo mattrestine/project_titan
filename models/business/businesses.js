@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 // SCHEMA
 var businessSchema = new mongoose.Schema(
     {
-        name: String,
+        bname: String,
         logo: String,
         desc: String,
         video: String,

@@ -26,7 +26,7 @@ router.get('/new', middleware.isLoggedIn, function(req, res) {
 // Save new business to db
 router.post('/', middleware.isLoggedIn, function(req, res) {
     
-        var name = req.body.name;
+        var bname = req.body.bname;
         var logo = req.body.logo;
         var desc = req.body.desc;
         var video = req.body.video;
@@ -36,13 +36,13 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
             firstname: req.user.firstname,
             lastname: req.user.lastname
         };
-        var newData = {name:name, logo:logo, desc:desc, video:video, url:url, owner:owner};
+        var newData = {bname:bname, logo:logo, desc:desc, video:video, url:url, owner:owner};
     Business.create(newData, function(err, data) {
         if(err) {
             req.flash('error', err.message);
             res.redirect('/business');
         }
-        req.flash('success', 'Added new business: ' , req.body.name);
+        req.flash('success', 'Added new business: ', req.body.name);
         res.redirect('/business');
     });
 });

@@ -50,3 +50,7 @@ body {
 #loginForm {
     max-width: 500px;
 }
+/* Business Style */
+#businessLogo .thumbnail {
+    width: 200px;
+}

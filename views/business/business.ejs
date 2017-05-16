@@ -12,11 +12,11 @@
                         <img class='thumbnail' src='<%= bus.logo %>'>
                     </div>
                     <div id='businessHeader'>
-                        <h2><%= bus.name %></h2>
+                        <h2><%= bus.bname %></h2>
                         <h4>Owner: <%= currentUser.firstname %> <%= currentUser.lastname %></h4>
                     </div>
                     <div id='businessBody'>
-                        <h4>Website: <a href='<%= bus.url %>'><%= bus.name %></a></h4>
+                        <h4>Website: <a href='<%= bus.url %>'><%= bus.bname %></a></h4>
                         <p> <%= bus.desc.substring(0,127) %> </p>
                         <!--<h4>Video</h4>
                         <iframe width="280" src="<%= bus.video %>" frameborder="0" allowfullscreen></iframe>-->
