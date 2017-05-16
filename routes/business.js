@@ -42,7 +42,7 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
             req.flash('error', err.message);
             res.redirect('/business');
         }
-        req.flash('success', 'Added new business: ', req.body.name);
+        req.flash('success', 'Added new business: ', req.body.bname);
         res.redirect('/business');
     });
 });
