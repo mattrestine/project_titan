@@ -47,8 +47,8 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
     });
 });
 // Business Index (Show One)
-router.get('/:id', function(req, res) {
-    Business.findById(req.body.id, function(err, data) {
+router.get('/:id', isLoggedIn, function(req, res) {
+    Business.findById(req.params.id, function(err, data) {
         if(err) {
             console.log(err);
             req.flash('error', err.message);
