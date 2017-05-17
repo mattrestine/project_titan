@@ -13,7 +13,7 @@
                             <img class='thumbnail' src='<%= bus.logo %>'>
                         </div>
                         <div id='businessHeader'>
-                            <h2><%= bus.bname %></h2>
+                            <h2><a href='/<%= bus._id %>'><%= bus.bname %></a></h2>
                             <h4>Owner: <%= bus.owner.firstname %> <%= bus.owner.lastname %></h4>
                         </div>
                         <div id='businessBody'>
@@ -25,7 +25,7 @@
                         <div id='businessFooter'>
                             <p><em>created:</em> <i><%= bus.created.toDateString() %></i></p>
                         </div>
-                        <a href="<a href='/business/<%= bus._id %>">Click here</a>
+                        <a href='/business/<%= bus._id %>'>Click here</a>
                     </div>
                 <% }) %>
             </div>
