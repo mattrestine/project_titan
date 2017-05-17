@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+    <% include ../partials/nav %>
+        <div class='container'>
+            <div id='showBusinessHeader'>
+                <h1><%= data.bname %></h1>
+            </div>
+            <div id='showBusinessBody'>
+                <h4>Owner: <%= data.owner.firstname %> <%= data.owner.lastname %>
+                <div id='showDesc'>
+                    <p>Description:</p>
+                    <p><%= data.desc %></p>
+                    <div id='showURL'>
+                        <h4>For More Info:</h4> <a href='<%= data.url %>'><button class='btn btn-xs btn-primary'><%= data.bname %></button></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+<% include ../partials/footer %>

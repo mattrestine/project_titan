@@ -9,7 +9,7 @@ var express  = require('express'),
     middleware = require('../middleware');
 var router = express.Router();
 // ROUTES
-// Business Index
+// Business Index (Show All)
 router.get('/', function(req, res) {
     Business.find({}, function(err, data) {
         if(err) {
@@ -44,6 +44,16 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
         }
         req.flash('success', 'Added new business: ', req.body.bname);
         res.redirect('/business');
+    });
+});
+// Business Index (Show One)
+router.get('/:id', function(req, res) {
+    Business.findById(req.body.id, function(err, data) {
+        if(err) {
+            console.log(err);
+            req.flash('error', err.message);
+        }
+        res.render('business/show', {data:data});
     });
 });
 // MODULE EXPORTS
