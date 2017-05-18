@@ -1,13 +1,17 @@
 // SETUP
 var express  = require('express'),
     passport = require('passport'),
+    methodOverride = require('method-override'), //Matt -- Do I need to add it here? 
     Business = require('../models/business/businesses'),
     Address  = require('../models/address/addresses'),
     Contact  = require('../models/contact/contacts'),
     Image    = require('../models/image/images'),
     Comment  = require('../models/comment/comments'),
-    middleware = require('../middleware');
+    middleware = require('../middleware')
+    app = express();
 var router = express.Router();
+//uses
+app.use(methodOverride("_method"));
 // ROUTES
 // Business Index (Show All)
 router.get('/', function(req, res) {
@@ -56,5 +60,28 @@ router.get('/:id', middleware.isLoggedIn, function(req, res) {
         res.render('business/show', {data:data});
     });
 });
+
+//Matt -- 1. Unsure about redirect link on error. 
+router.get('/:id/edit', middleware.isLoggedIn, function(req, res) {
+    Business.findById(req.params.id, function(err, data) {
+        if(err) {
+            console.log(err);
+            req.flash('error', err.message);
+        }
+        res.render('business/edit', {data:data});
+    });
+});
+
+app.put('/:id/edit', middleware.isLoggedIn, function(req, res){
+    res.send('update route');
+    // Business.findByIdAndUpdate(req.params.id, req.params.data, function(err, update){
+    //     if(err){
+    //         req.flash('error', err.message);
+    //     } else {
+    //         res.redirect('/business/' + req.params.id);
+    //     }
+    // });
+});
+
 // MODULE EXPORTS
 module.exports = router;
