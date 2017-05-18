@@ -69,7 +69,6 @@ router.get('/:id/edit', middleware.isLoggedIn, function(req, res) {
             req.flash('error', err.message);
             res.redirect('back');
         }
-        req.flash('success', data.bname + ' has been updated.');
         res.render('business/edit', {data:data});
     });
 });
