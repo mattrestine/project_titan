@@ -54,3 +54,10 @@ body {
 #businessLogo .thumbnail {
     width: 200px;
 }
+#updateRemove p{
+    display: inline-block;
+    margin: 20px 0;
+}
+#showVideo{
+    margin: 20px 0;
+}

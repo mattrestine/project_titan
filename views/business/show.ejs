@@ -9,14 +9,20 @@
             </div>
             <div id='showBusinessBody'>
                 <h4>Owner: <%= data.owner.firstname %> <%= data.owner.lastname %>
+                <div id="updateRemove">
+                    <p><a href="" class="btn btn-danger">Delete</a></p>
+                    <p><a href="" class="btn btn-warning">Edit</a></p>
+                </div>
                 <div id='showDesc'>
-                    <p>Description:</p>
+                    <h3>Description:</h3>
                     <p><%= data.desc %></p>
                     <div id='showURL'>
-                        <h4>For More Info:</h4> <a class='btn btn-xs btn-primary' href='<%= data.url %>'><%= data.bname %></a>
-                    </div>
+                        <h4>For More Info: <a class='btn btn-xs btn-primary' href='<%= data.url %>'><%= data.bname %></a></h4>
                 </div>
-
+                </div>
+                <div id="showVideo">
+                    <iframe width="420" height="345" src="<%= data.video %>"frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
 <% include ../partials/footer %>
