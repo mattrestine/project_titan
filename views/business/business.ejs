@@ -25,7 +25,9 @@
                         <div id='businessFooter'>
                             <p><em>created:</em> <i><%= bus.created.toDateString() %></i></p>
                         </div>
-                        <a href='/business/<%= bus._id %>'>Click here</a>
+                        <p>
+                            <a class="btn btn-primary" href='/business/<%= bus._id %>'>Click here</a>
+                        </p>
                     </div>
                 <% }) %>
             </div>
