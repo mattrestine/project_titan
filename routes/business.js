@@ -54,8 +54,8 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
 router.get('/:id', middleware.isLoggedIn, function(req, res) {
     Business.findById(req.params.id, function(err, data) {
         if(err) {
-            console.log(err);
             req.flash('error', err.message);
+            res.redirect('/' + req.params.id);
         }
         res.render('business/show', {data:data});
     });
@@ -67,7 +67,9 @@ router.get('/:id/edit', middleware.isLoggedIn, function(req, res) {
         if(err) {
             console.log(err);
             req.flash('error', err.message);
+            res.redirect('back');
         }
+        req.flash('success', data.bname + ' has been updated.');
         res.render('business/edit', {data:data});
     });
 });
