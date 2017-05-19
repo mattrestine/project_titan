@@ -88,7 +88,7 @@ router.delete('/:id', middleware.isLoggedIn, function(req, res){
     Business.findByIdAndRemove(req.params.id, req.body.data, function(err){
         if(err){
              req.flash('error', err.message);
-            req.redirect('back');
+            res.redirect('back');
         } else {
              req.flash('success', "Your business has been deleted.");
              res.redirect('/business');
