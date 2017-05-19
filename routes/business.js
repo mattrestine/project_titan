@@ -2,9 +2,6 @@
 var express  = require('express'),
     passport = require('passport'),
     Business = require('../models/business/businesses'),
-    Address  = require('../models/address/addresses'),
-    Contact  = require('../models/contact/contacts'),
-    Image    = require('../models/image/images'),
     Comment  = require('../models/comment/comments'),
     middleware = require('../middleware')
     app = express();
