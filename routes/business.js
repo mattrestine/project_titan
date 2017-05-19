@@ -60,7 +60,7 @@ router.get('/:id', middleware.isLoggedIn, function(req, res) {
         res.render('business/show', {data:data});
     });
 });
-
+// Business Edit (Edit One)
 router.get('/:id/edit', middleware.isLoggedIn, function(req, res) {
     Business.findById(req.params.id, function(err, data) {
         if(err) {
@@ -71,7 +71,7 @@ router.get('/:id/edit', middleware.isLoggedIn, function(req, res) {
         res.render('business/edit', {data:data});
     });
 });
-
+// Business PUT
 router.put('/:id', middleware.isLoggedIn, function(req, res){
     Business.findByIdAndUpdate(req.params.id, req.body.data, function(err, update){
         if(err){
