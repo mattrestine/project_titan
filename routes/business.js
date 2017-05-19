@@ -73,7 +73,7 @@ router.get('/:id/edit', middleware.isLoggedIn, function(req, res) {
 });
 
 router.put('/:id', middleware.isLoggedIn, function(req, res){
-    Business.findByIdAndUpdate(req.params.id, req.params.data, function(err, update){
+    Business.findByIdAndUpdate(req.params.id, req.body.data, function(err, update){
         if(err){
             req.flash('error', err.message);
         } else {
