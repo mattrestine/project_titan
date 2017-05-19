@@ -55,7 +55,7 @@ router.get('/:id', middleware.isLoggedIn, function(req, res) {
     Business.findById(req.params.id, function(err, data) {
         if(err) {
             req.flash('error', err.message);
-            res.redirect('/' + req.params.id);
+            res.redirect('/business/' + req.params.id);
         }
         res.render('business/show', {data:data});
     });
