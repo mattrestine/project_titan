@@ -1,7 +1,6 @@
 // SETUP
 var express  = require('express'),
     passport = require('passport'),
-    methodOverride = require('method-override'), //Matt -- Do I need to add it here? 
     Business = require('../models/business/businesses'),
     Address  = require('../models/address/addresses'),
     Contact  = require('../models/contact/contacts'),
@@ -10,8 +9,6 @@ var express  = require('express'),
     middleware = require('../middleware')
     app = express();
 var router = express.Router();
-//uses
-router.use(methodOverride("_method"));
 // ROUTES
 // Business Index (Show All)
 router.get('/', function(req, res) {
