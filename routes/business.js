@@ -11,7 +11,7 @@ var express  = require('express'),
     app = express();
 var router = express.Router();
 //uses
-app.use(methodOverride("_method"));
+router.use(methodOverride("_method"));
 // ROUTES
 // Business Index (Show All)
 router.get('/', function(req, res) {
@@ -61,7 +61,6 @@ router.get('/:id', middleware.isLoggedIn, function(req, res) {
     });
 });
 
-//Matt -- 1. Unsure about redirect link on error. 
 router.get('/:id/edit', middleware.isLoggedIn, function(req, res) {
     Business.findById(req.params.id, function(err, data) {
         if(err) {
@@ -73,15 +72,14 @@ router.get('/:id/edit', middleware.isLoggedIn, function(req, res) {
     });
 });
 
-app.put('/:id/edit', middleware.isLoggedIn, function(req, res){
-    res.send('update route');
-    // Business.findByIdAndUpdate(req.params.id, req.params.data, function(err, update){
-    //     if(err){
-    //         req.flash('error', err.message);
-    //     } else {
-    //         res.redirect('/business/' + req.params.id);
-    //     }
-    // });
+router.put('/:id', middleware.isLoggedIn, function(req, res){
+    Business.findByIdAndUpdate(req.params.id, req.params.data, function(err, update){
+        if(err){
+            req.flash('error', err.message);
+        } else {
+            res.redirect('/business/' + req.params.id);
+        }
+    });
 });
 
 // MODULE EXPORTS
