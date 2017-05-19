@@ -87,10 +87,10 @@ router.put('/:id', middleware.isLoggedIn, function(req, res){
 router.delete('/:id', middleware.isLoggedIn, function(req, res){
     Business.findByIdAndRemove(req.params.id, req.body.data, function(err){
         if(err){
-             req.flash('error', req.body.data.bname + "failed to delete.");
+             req.flash('error', err.message);
             req.redirect('back');
         } else {
-             req.flash('success', req.body.data.bname + " have been deleted.");
+             req.flash('success', "Your business has been deleted.");
              res.redirect('/business');
         }
        }); 
