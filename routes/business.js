@@ -76,8 +76,10 @@ router.put('/:id', middleware.isLoggedIn, function(req, res){
     Business.findByIdAndUpdate(req.params.id, req.body.data, function(err, update){
         if(err){
             req.flash('error', err.message);
+            req.redirect('back')
         } else {
             res.redirect('/business/' + req.params.id);
+            req.flash('error', success.message);
         }
     });
 });
