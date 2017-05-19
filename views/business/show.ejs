@@ -10,9 +10,14 @@
             <div id='showBusinessBody'>
                 <h4>Owner: <%= data.owner.firstname %> <%= data.owner.lastname %>
                 <div id="updateRemove">
-                    <p><a href="" class="btn btn-danger">Delete</a></p>
-                    <p><a href="<%=data._id %>/edit" class="btn btn-warning">Edit</a></p>
+                 <p><a href="<%=data._id %>/edit" class="btn btn-warning">Edit</a></p>
+                <form action='/business/<%= data._id %>?_method=DELETE' method='POST'>
+                    <button class="btn btn-danger">Delete</button>
+                </form>
                 </div>
+
+                   
+              
                 <div id='showDesc'>
                     <h3>Description:</h3>
                     <p><%= data.desc %></p>
