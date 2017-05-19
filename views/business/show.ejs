@@ -7,26 +7,31 @@
             <div id='showBusinessHeader'>
                 <h1><%= data.bname %></h1>
             </div>
+            <div id="showBusinessAddress">
+                <p><strong>address:</strong></p>
+                <p><%= data.address.street %></p>
+                <p><%= data.address.city %>, <%= data.address.state %> <%= data.address.zipcode %></p>
+            </div>
             <div id='showBusinessBody'>
                 <h4>Owner: <%= data.owner.firstname %> <%= data.owner.lastname %>
                 <div id="updateRemove">
-                 <p><a href="<%=data._id %>/edit" class="btn btn-warning">Edit</a></p>
-                <form action='/business/<%= data._id %>?_method=DELETE' method='POST'>
-                    <button class="btn btn-danger">Delete</button>
-                </form>
+                    <p><a href="<%=data._id %>/edit" class="btn btn-warning">Edit</a></p>
+                    <form action='/business/<%= data._id %>?_method=DELETE' method='POST'>
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
                 </div>
-
-                   
-              
+                <img src="" alt="">
+                <%= data.images.img1 %>
                 <div id='showDesc'>
                     <h3>Description:</h3>
                     <p><%= data.desc %></p>
                     <div id='showURL'>
                         <h4>For More Info: <a class='btn btn-xs btn-primary' href='<%= data.url %>'><%= data.bname %></a></h4>
+                    </div>
                 </div>
-                </div>
+                
                 <div id="showVideo">
-                    <iframe width="420" height="345" src="<%= data.video %>"frameborder="0" allowfullscreen></iframe>
+                    <iframe width="420" height="345" src="<%= data.video %>" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

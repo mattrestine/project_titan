@@ -34,7 +34,20 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
             firstname: req.user.firstname,
             lastname: req.user.lastname
         };
-        var newData = {bname:bname, logo:logo, desc:desc, video:video, url:url, owner:owner};
+        var address = {
+            street: req.body.street,
+            city: req.body.city,
+            state: req.body.state,
+            zipcode: req.body.zipcode
+        };
+        var images = {
+            0: req.body.img1,
+            1: req.body.img2,
+            2: req.body.img3,
+            3: req.body.img4,
+            4: req.body.img5,
+        };
+        var newData = {bname:bname, logo:logo, desc:desc, video:video, url:url, owner:owner, address:address, images:images};
     Business.create(newData, function(err, data) {
         if(err) {
             req.flash('error', err.message);
