@@ -78,8 +78,8 @@ router.put('/:id', middleware.isLoggedIn, function(req, res){
             req.flash('error', err.message);
             req.redirect('back')
         } else {
-            res.redirect('/business/' + req.params.id);
-            req.flash('error', success.message);
+            req.flash('success', req.body.data.bname + " have been successfully updated.");
+            res.redirect('/business/' + req.params.id);          
         }
     });
 });
