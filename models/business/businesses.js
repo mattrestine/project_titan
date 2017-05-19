@@ -8,6 +8,23 @@ var businessSchema = new mongoose.Schema(
         desc: String,
         video: String,
         url: String,
+        address: {
+            street: String,
+            city: String,
+            state: String,
+            zipcode: Number
+        },
+        contact: {
+            email: String,
+            phone: String
+        },
+        images: {
+            0: String,
+            1: String,
+            2: String,
+            3: String,
+            4: String
+        },
         owner: {
             id: {
                 type: mongoose.Schema.Types.ObjectId,
@@ -16,24 +33,6 @@ var businessSchema = new mongoose.Schema(
             firstname: String,
             lastname: String
         },
-        location: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'Location'
-            }
-        ],
-        contact: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'Contact'
-            }
-        ],
-        images: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'Images'
-            }
-        ],
         comments: [
             {
                 type: mongoose.Schema.Types.ObjectId,
