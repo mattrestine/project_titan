@@ -15,6 +15,7 @@ mongoose.Promise = global.Promise;
 var app = express();
 var indexRoute = require('./routes/index');
 var businessRoute = require('./routes/business');
+var commentRoute = require('./routes/comment');
 // Set and Use
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/bower_components'));
@@ -43,6 +44,7 @@ app.use(function(req, res, next) {
 // Index Route
 app.use('/', indexRoute);
 app.use('/business', businessRoute);
+app.use('/comment', commentRoute);
 // LISTEN
 app.listen('3000', 'localhost', function() {
     console.log('Server is running...');
