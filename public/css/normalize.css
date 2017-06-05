@@ -50,13 +50,19 @@ body {
 #loginForm {
     max-width: 500px;
 }
+/*Edit Business Form Style*/
+#editBusinessForm{
+    padding: 20px 0;
+}
 /* Business Style */
 #businessLogo .thumbnail {
     width: 200px;
 }
-#updateRemove p{
+#remove{
+    padding: 10px 0;
+}
+#remove form{
     display: inline-block;
-    margin: 20px 0;
 }
 #showVideo{
     margin: 20px 0;

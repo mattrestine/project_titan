@@ -1,10 +1,10 @@
 <% include ../partials/header %>
 <% include ../partials/nav %>
     <div class='container'>
-        <div id="editBusinessHeader">
-            <h2>Edit Business Information</h2>
-        </div>
         <div id='editBusinessForm'>
+            <div id="editBusinessHeader">
+                <h2>Edit Business Information</h2>
+            </div>
             <form action='/business/<%= data._id %>?_method=PUT' method='POST'>
                 <div class='form-group'>
                     <label for='busName'>Name of Business</label>
@@ -63,7 +63,9 @@
                     <textarea class="form-control" rows="3" name='data[desc]'><%= data.desc %></textarea>
                 </div>
                 <button class='btn btn-success'>Update Your Info</button>
+                <a href="/business/<%= data._id %>" class="btn btn-danger">cancel</a>
             </form>
+                
         </div>
     </div>
       
