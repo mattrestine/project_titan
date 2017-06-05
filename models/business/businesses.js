@@ -3,15 +3,15 @@ var mongoose = require('mongoose');
 // SCHEMA
 var businessSchema = new mongoose.Schema(
     {
-        busname: {type: String},
-        logo: {type: String},
-        desc: {type: String},
-        video: {type: String},
-        url: {type: String},
+        bname  : {type: String},
+        logo   : {type: String},
+        desc   : {type: String},
+        video  : {type: String},
+        url    : {type: String},
         address: {
-            street: String,
-            city: String,
-            state: String,
+            street : String,
+            city   : String,
+            state  : String,
             zipcode: {type: Number}
         },
         contact: {

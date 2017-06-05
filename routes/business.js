@@ -25,10 +25,10 @@ router.get('/new', middleware.isLoggedIn, function(req, res) {
 router.post('/', middleware.isLoggedIn, function(req, res) {
     
         var bname = req.body.bname;
-        var logo = req.body.logo;
-        var desc = req.body.desc;
+        var logo  = req.body.logo;
+        var desc  = req.body.desc;
         var video = req.body.video;
-        var url = req.body.url;
+        var url   = req.body.url;
         var owner = {
             id: req.user._id,
             firstname: req.user.firstname,
@@ -47,7 +47,7 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
             3: req.body.img4,
             4: req.body.img5,
         };
-        var newData = {bname:bname, logo:logo, desc:desc, video:video, url:url, owner:owner, address:address, images:images};
+        var newData = { bname:bname, logo:logo, desc:desc, video:video, url:url, owner:owner, address:address, images:images};
     Business.create(newData, function(err, data) {
         if(err) {
             req.flash('error', err.message);

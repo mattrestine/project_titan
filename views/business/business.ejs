@@ -14,11 +14,11 @@
                         </div>
                         <div id='businessHeader'>
                             <h2><a href='/business/<%= bus._id %>'><%= bus.bname %></a></h2>
-                            <h4>Owner: <%= bus.owner.firstname %> <%= bus.owner.lastname %></h4>
+                            <p>Owner: <%= bus.owner.firstname %> <%= bus.owner.lastname %></p>
                         </div>
                         <div id='businessBody'>
-                            <h4>Website: <a href='<%= bus.url %>'><%= bus.bname %></a></h4>
-                            <p> <%= bus.desc.substring(0,127) %> ... </p>
+                            <p>Website: <a href='<%= bus.url %>'><%= bus.url.substring(0,25) %>...</a></p>
+                            <p><%= bus.desc.substring(0,127) %> ... </p>
                             <!--<h4>Video</h4>
                             <iframe width="280" src="<%= bus.video %>" frameborder="0" allowfullscreen></iframe>-->
                         </div>
