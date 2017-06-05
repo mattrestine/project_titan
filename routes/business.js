@@ -59,7 +59,7 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
 });
 // Business Index (Show One)
 router.get('/:id', middleware.isLoggedIn, function(req, res) {
-    Business.findById(req.params.id, function(err, data) {
+    Business.findById(req.params.id).populate("comments").exec(function(err, data) {
         if(err) {
             req.flash('error', err.message);
             res.redirect('/business/' + req.params.id);
@@ -102,6 +102,8 @@ router.delete('/:id', middleware.isLoggedIn, function(req, res){
         }
        }); 
 });
+
+
 
 // MODULE EXPORTS
 module.exports = router;
