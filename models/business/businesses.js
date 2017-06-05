@@ -19,11 +19,11 @@ var businessSchema = new mongoose.Schema(
             phone: String
         },
         images: {
-            0: String,
-            1: String,
-            2: String,
-            3: String,
-            4: String
+            img0: String,
+            img1: String,
+            img2: String,
+            img3: String,
+            img4: String
         },
         owner: {
             id: {

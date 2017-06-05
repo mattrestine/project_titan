@@ -20,8 +20,23 @@
                         <button class="btn btn-danger">Delete</button>
                     </form>
                 </div>
-                <img src="" alt="">
-                <%= data.images.img1 %>
+                <div class="row">
+                    <div class="col-xs-12 col-md-2">
+                        <img class="img-responsive" src="<%= data.images.img0 %>" alt="">
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                        <img class="img-responsive" src="<%= data.images.img1 %>" alt="">
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                        <img class="img-responsive" src="<%= data.images.img2 %>" alt="">
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                        <img class="img-responsive" src="<%= data.images.img3 %>" alt="">
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                        <img class="img-responsive" src="<%= data.images.img4 %>" alt="">
+                    </div>
+                </div>
                 <div id='showDesc'>
                     <h3>Description:</h3>
                     <p><%= data.desc %></p>
@@ -29,11 +44,10 @@
                         <h4>For More Info: <a class='btn btn-xs btn-primary' href='<%= data.url %>'><%= data.bname %></a></h4>
                     </div>
                 </div>
-                
                 <div id="showVideo">
                     <iframe width="420" height="345" src="<%= data.video %>" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <li><a class="btn btn-primary" href='/comment/new'>Comments</a></li>
+                <a class="btn btn-primary" href='/comment/new'>Comments</a>
             </div>
         </div>
 <% include ../partials/footer %>

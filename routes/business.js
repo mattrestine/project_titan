@@ -41,11 +41,11 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
             zipcode: req.body.zipcode
         };
         var images = {
-            0: req.body.img1,
-            1: req.body.img2,
-            2: req.body.img3,
-            3: req.body.img4,
-            4: req.body.img5,
+            img0: req.body.img0,
+            img1: req.body.img1,
+            img2: req.body.img2,
+            img3: req.body.img3,
+            img4: req.body.img4
         };
         var newData = { bname:bname, logo:logo, desc:desc, video:video, url:url, owner:owner, address:address, images:images};
     Business.create(newData, function(err, data) {
