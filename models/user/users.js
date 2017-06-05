@@ -4,10 +4,10 @@ var mongoose = require('mongoose'),
 // SCHEMA
 var userSchema = new mongoose.Schema(
     {
-        username: {type: String, required: true},
-        password: {type: String, required: true},
-        firstname: {type: String, required: true},
-        lastname: {type: String, required: true},
+        username: {type: String},
+        password: {type: String},
+        firstname: {type: String},
+        lastname: {type: String},
         hasBusiness: false,
         subs: [
             {
