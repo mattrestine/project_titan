@@ -2,7 +2,7 @@
 var express  = require('express'),
     passport = require('passport'),
     Business = require('../models/business/businesses'),
-    Comment  = require('../models/comment/comments'),
+    Comments  = require('../models/comment/comments'),
     middleware = require('../middleware')
     app = express();
 var router = express.Router();
