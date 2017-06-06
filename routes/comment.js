@@ -10,7 +10,7 @@ var router = express.Router();
 // ROUTES
 // Comment New
 router.get('/new', function(req, res) {
-      Business.find({}, function(err, data) {
+      Business.find(req.params.id, function(err, data) {
         if(err) {
             console.log(err)
             //req.flash('error', err.message);
