@@ -6,18 +6,17 @@ var User     = require('../models/user/users'),
     Comment  = require('../models/comment/comments'),
     middleware = require('../middleware')
     app = express();
-var router = express.Router();
+var router = express.Router({mergeParams: true});
 // ROUTES
 // Comment New
 router.get('/new', function(req, res) {
       Business.find(req.params.id, function(err, data) {
         if(err) {
-            console.log(err)
+            console.log(err);
             //req.flash('error', err.message);
             res.redirect('/business');
         }
-            console.log(data)
-            res.render('comment/new', {data: data });
+            res.render('comments/new', {data: data});
     });
 });
 

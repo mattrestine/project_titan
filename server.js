@@ -6,6 +6,8 @@ var User           = require('./models/user/users'),
     passport       = require('passport'),
     bodyParser     = require('body-parser'),
     localStrategy  = require('passport-local'),
+    Comments       = require('./models/comment/comments'),
+    Business       = require('./models/business/businesses'),
     methodOverride = require('method-override');
 // SETUP
 // Mongoose
@@ -44,7 +46,7 @@ app.use(function(req, res, next) {
 // Index Route
 app.use('/', indexRoute);
 app.use('/business', businessRoute);
-app.use('/comment', commentRoute);
+app.use('/business/:id/comments', commentRoute);
 // LISTEN
 app.listen('3000', 'localhost', function() {
     console.log('Server is running...');
