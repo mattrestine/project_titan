@@ -10,9 +10,23 @@ var router = express.Router();
 // ROUTES
 // Comment New
 router.get('/new', function(req, res) {
-    res.send('Comment Form');
+      Business.find({}, function(err, data) {
+        if(err) {
+            console.log(err)
+            //req.flash('error', err.message);
+            res.redirect('/business');
+        }
+            console.log(data)
+            res.render('comment/new', {data: data });
+    });
 });
-// Comment Post
+
+//Comment Post
+router.post('/', function(req, res){
+    //seek for business ID
+    //create post
+})
+
 // Comment Get One (Edit Form)
 // Comment Put One
 // Comment Delete One
