@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+    <% include ../partials/nav %>    
+    <div class='container'>
+        <div id='editBusinessForm'>
+            <div id="editBusinessHeader">
+                <h2>Edit Your Comment</h2>
+            </div>
+            <form action='/business/<%= data_id %>/comments/<%= comment.id %>?_method=PUT' method='POST'>
+                <div class='form-group'>
+                    <textarea class="form-control" type="text" name='comment[text]' rows="10" ><%= comment.text %></textarea>
+                </div>
+                <button class='btn btn-success'>Update Your Comment</button>
+                <a href="/business/<%= data_id %>" class="btn btn-danger">cancel</a>
+            </form>        
+        </div>
+    </div>
+
+<% include ../partials/footer %>

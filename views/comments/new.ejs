@@ -4,14 +4,13 @@
            <div class='container'>
         <div id='editBusinessForm'>
             <div id="editBusinessHeader">
-                <h2>Edit Business Information</h2>
+                <h2>Create Your Comment</h2>
             </div>
             <form action='/business/<%= data._id %>/comments' method='POST'>
                 <div class='form-group'>
-                    <label for='busDesc'>Business Descripton</label>
                     <textarea class="form-control" type="text" name='comment[text]' rows="10" ></textarea>
                 </div>
-                <button class='btn btn-success'>Sent Your comments</button>
+                <button class='btn btn-success'>Submit Your Comment</button>
                 <a href="/business/<%= data._id %>" class="btn btn-danger">cancel</a>
             </form>
                 
