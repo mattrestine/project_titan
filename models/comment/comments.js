@@ -2,7 +2,8 @@
 var mongoose = require('mongoose');
 // SCHEMA
 var commentSchema = new mongoose.Schema(
-    {
+{
+        text: String,
         author:
         {
             id:
@@ -12,7 +13,11 @@ var commentSchema = new mongoose.Schema(
             },
             username: String
         }
+
+        
     }
+    
 );
+
 // MODULE EXPORTS
 module.exports = mongoose.model('Comments', commentSchema);

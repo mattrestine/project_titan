@@ -9,8 +9,8 @@ var User     = require('../models/user/users'),
 var router = express.Router({mergeParams: true});
 // ROUTES
 // Comment New
-router.get('/new', function(req, res) {
-      Business.find(req.params.id, function(err, data) {
+router.get('/new', middleware.isLoggedIn, function(req, res) {
+      Business.findById(req.params.id, function(err, data) {
         if(err) {
             console.log(err);
             //req.flash('error', err.message);
@@ -22,8 +22,28 @@ router.get('/new', function(req, res) {
 
 //Comment Post
 router.post('/', function(req, res){
-    //seek for business ID
-    //create post
+    Business.findById(req.params.id, function(err, data){
+        if(err){
+            console.log(err);
+            res.redirect('/business');
+        } else {
+            Comments.create(req.body.comment, function(err, comment){
+                if(err){
+                    console.log(err)
+                } else {
+                    comment.author.id = req.user._id;
+                    comment.author.username = req.user.username;
+                    comment.save();
+                    //--//
+                    data.comments.push(comment);
+                    data.save();
+                    //--//
+                    req.flash("success", "Success: Submission Completed!");
+                    res.redirect('/business/' + data._id);
+                }
+            });
+        }
+    })
 })
 
 // Comment Get One (Edit Form)

@@ -51,5 +51,17 @@
                 </div>
                 <a class="btn btn-primary" href='/business/<%= data._id %>/comments/new'>Comments</a>
             </div>
+            
+            <div>
+                <% data.comments.forEach(function(comment){ %>
+                <div class="row">
+                    <div class="col-md-12 commentBox">
+                        <strong><%= comment.author.username %>
+                        <span class="pull-right">10 Days ago</span></strong>
+                        <p> <%= comment.text %> </p>
+                    </div>
+                </div>
+                 <% }) %>
+            </div>
         </div>
 <% include ../partials/footer %>

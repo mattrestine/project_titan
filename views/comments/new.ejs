@@ -6,10 +6,10 @@
             <div id="editBusinessHeader">
                 <h2>Edit Business Information</h2>
             </div>
-            <form action='<%= data._id %>' method='POST'>
+            <form action='/business/<%= data._id %>/comments' method='POST'>
                 <div class='form-group'>
                     <label for='busDesc'>Business Descripton</label>
-                    <textarea class="form-control" rows="10" name=''></textarea>
+                    <textarea class="form-control" type="text" name='comment[text]' rows="10" ></textarea>
                 </div>
                 <button class='btn btn-success'>Sent Your comments</button>
                 <a href="/business/<%= data._id %>" class="btn btn-danger">cancel</a>
