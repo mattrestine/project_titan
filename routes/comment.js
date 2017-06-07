@@ -13,23 +13,24 @@ router.get('/new', middleware.isLoggedIn, function(req, res) {
       Business.findById(req.params.id, function(err, data) {
         if(err) {
             console.log(err);
-            //req.flash('error', err.message);
-            res.redirect('/business');
+            req.flash("error",  err.message);
         }
             res.render('comments/new', {data: data});
     });
 });
 
 //Comment Post
-router.post('/', function(req, res){
+router.post('/', middleware.isLoggedIn, function(req, res){
     Business.findById(req.params.id, function(err, data){
         if(err){
             console.log(err);
+            req.flash("error", err.message);
             res.redirect('/business');
         } else {
             Comments.create(req.body.comment, function(err, comment){
                 if(err){
-                    console.log(err)
+                    console.log(err);
+                    req.flash("error",  err.message);
                 } else {
                     comment.author.id = req.user._id;
                     comment.author.username = req.user.username;
