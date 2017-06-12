@@ -47,7 +47,7 @@ router.post('/', middleware.isLoggedIn, function(req, res){
 });
 
 // Comment Get One (Edit Form)
-router.get('/:comment_id/edit', function(req, res){
+router.get('/:comment_id/edit', middleware.isCommentOwnership, function(req, res){
     Comments.findById(req.params.comment_id, function(err, editComment){
         if(err){
             req.flash('error', err.message);
@@ -58,7 +58,7 @@ router.get('/:comment_id/edit', function(req, res){
     });   
 });
 // Comment Put One
-router.put('/:comment_id', function(req, res){
+router.put('/:comment_id', middleware.isCommentOwnership, function(req, res){
     Comments.findByIdAndUpdate(req.params.comment_id, req.body.comment, function(err, updateComments){
         if(err){
             req.flash('error', err.message);
@@ -71,7 +71,7 @@ router.put('/:comment_id', function(req, res){
 });
 
 // Comment Delete One
-router.delete('/:comment_id', function(req, res){
+router.delete('/:comment_id', middleware.isCommentOwnership, function(req, res){
     Comments.findByIdAndRemove(req.params.comment_id, req.body.comment, function(err){
         if(err){
             res.redirect('back');
