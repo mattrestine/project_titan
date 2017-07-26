@@ -3,3 +3,10 @@
 node_modules/*
 ***Custom MongoDB Files***
 mongodb.cfg
+***mockups***
+Mockup/*
+
+yarn.lock
+npm_debug.log
+yarn-error.log
+bs-config.js

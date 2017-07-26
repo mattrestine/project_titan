@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+html {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+figure {
+  margin: 0; }
+
+body {
+  font-family: 'Montserrat', arial, sans-serif !important; }
+
+/*   Color   */
+/*   Container Size  */
+/*   Breakpoint Sets  */
+/*  Flex Grid   */
+.banner {
+  height: 300px;
+  background: #c1c1c1;
+  color: #737373; }
+
+.pillSolid {
+  background: #1c9eb4;
+  color: #f6f6f6;
+  border: none;
+  border-radius: 2em;
+  padding: .5em 3em;
+  font-size: .7em; }
+  .pillSolid:hover {
+    background: #177f91;
+    color: #f6f6f6;
+    transition: all 0.3s ease; }
+  .pillSolid:active {
+    background: #0b3d46;
+    color: #f6f6f6; }
+
+.pillOutline {
+  background: transparent;
+  color: #1c9eb4;
+  border: 2px solid #1c9eb4;
+  border-radius: 2em;
+  border-radius: 2em;
+  padding: .5em 1em; }
+  .pillOutline:hover {
+    background: #1c9eb4;
+    color: #f6f6f6;
+    transition: all 0.3s ease; }
+  .pillOutline:active {
+    background: #1c9eb4;
+    color: #f6f6f6; }
+
+.roundSolid {
+  background: #1c9eb4;
+  color: #f6f6f6;
+  border: none;
+  border-radius: 5em;
+  height: 5em;
+  width: 5em;
+  font-size: 1em;
+  font-weight: bold; }
+  .roundSolid:hover {
+    background: #177f91;
+    color: #f6f6f6;
+    transition: all 0.3s ease; }
+  .roundSolid:active {
+    background: #0b3d46;
+    color: #f6f6f6; }
+
+.roundOutline {
+  background: transparent;
+  color: #1c9eb4;
+  border: 2px solid #1c9eb4;
+  border-radius: 5em;
+  height: 5em;
+  width: 5em;
+  font-size: 1em;
+  font-weight: bold; }
+  .roundOutline:hover {
+    background: #1c9eb4;
+    color: #f6f6f6;
+    transition: all 0.3s ease; }
+  .roundOutline:active {
+    background: #1c9eb4;
+    color: #f6f6f6; }

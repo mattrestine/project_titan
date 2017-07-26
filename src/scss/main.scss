@@ -1,0 +1,42 @@
+@import "./base/baseAll";
+@import "./components/compAll";
+
+
+// buttons
+.banner{
+    height: 300px;
+    background: #c1c1c1;
+    color: #737373;
+}
+.pillSolid {
+    @include btnSolid($secondary, $white);
+    border-radius: 2em;
+    padding: .5em 3em;
+    font-size: .7em;
+}
+
+.pillOutline{
+    @include btnOutline($secondary, $white);
+    border-radius: 2em;
+    border-radius: 2em;
+    padding: .5em 1em;
+}
+
+
+.roundSolid {
+    @include btnSolid($secondary, $white);
+    border-radius: 5em;
+    height: 5em;
+    width: 5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.roundOutline{
+    @include btnOutline($secondary, $white);
+    border-radius: 5em;
+    height: 5em;
+    width: 5em;
+    font-size: 1em;
+    font-weight: bold;
+}

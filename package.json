@@ -4,7 +4,10 @@
   "description": "A social media for Deaf business",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -w -r src/scss/ -o src/css/",
+    "serve": "lite-server",
+    "start": "parallelshell \"npm run scss\" \"npm run serve\" "
   },
   "repository": {
     "type": "git",
@@ -27,5 +30,10 @@
   "bugs": {
     "url": "https://github.com/mattrestine/project_titan/issues"
   },
-  "homepage": "https://github.com/mattrestine/project_titan#readme"
+  "homepage": "https://github.com/mattrestine/project_titan#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0",
+    "node-sass": "^4.5.3",
+    "parallelshell": "^3.0.1"
+  }
 }
