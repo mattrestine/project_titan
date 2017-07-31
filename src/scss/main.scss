@@ -2,14 +2,18 @@
 @import "./components/compAll";
 //--------------------------------------
 
-
-.banner{
-    height: 300px;
-    background: #c1c1c1;
-    color: #737373;
+/* General */
+.bgSection{
+    background-color: $primary;
+    color: $white;
 }
 
-// buttons
+hr{
+    background:lighten($primary, 20%);
+}
+
+
+/* Buttons */
 .pillSolid {
     @include btnSolid($secondary, $white);
     border-radius: 2em;
@@ -20,8 +24,8 @@
 .pillOutline{
     @include btnOutline($secondary, $white);
     border-radius: 2em;
-    border-radius: 2em;
-    padding: .5em 1em;
+    padding: .3em 3em;
+    font-size: .7em;
 }
 
 .roundSolid {
@@ -40,4 +44,53 @@
     width: 5em;
     font-size: 1em;
     font-weight: bold;
+}
+
+
+/* Form */
+form{
+    padding: 10px;
+    margin: 2rem;
+}
+.form-control{
+    width: 100%;
+    background-color: $primary !important;
+    color: lighten($primary, 55%) !important;
+    border: none;
+    border-bottom: 2px solid lighten($primary, 10%);
+    border-radius: 0rem;
+    display: block;
+    padding: .5rem .75rem;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    &:focus{
+        border-color: transparent;
+        background-color: lighten($primary, 10%) !important;
+        color: lighten($primary, 55%) !important;
+    }
+    &:active{
+        background-color: lighten($primary, 10%);
+        border-bottom: 2px solid transparent;
+    }
+    &::placeholder{
+        color: lighten($primary, 20%);
+    }
+
+}
+
+/* Submit */
+.btnSubmit {
+    @include btnOutline($secondary, $white);
+    border-radius: 2em;
+    padding: .5em 3em;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    width: 100%;
+}
+
+/* Contents */
+
+header, footer{
+    height: 3rem;
+    background: $secondary;
 }

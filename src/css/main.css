@@ -12,7 +12,7 @@ html, body {
 figure {
   margin: 0; }
 
-body {
+* {
   font-family: 'Montserrat', arial, sans-serif !important; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -374,14 +374,22 @@ template {
   display: none; }
 
 /*   Color   */
+button:active {
+  outline: none;
+  border: none; }
+
 /*   Container Size  */
 /*   Breakpoint Sets  */
 /*  Flex Grid   */
-.banner {
-  height: 300px;
-  background: #c1c1c1;
-  color: #737373; }
+/* General */
+.bgSection {
+  background-color: #282e34;
+  color: #f6f6f6; }
 
+hr {
+  background: #54616e; }
+
+/* Buttons */
 .pillSolid {
   background: #1c9eb4;
   color: #f6f6f6;
@@ -392,7 +400,7 @@ template {
   .pillSolid:hover {
     background: #177f91;
     color: #f6f6f6;
-    transition: all 0.3s ease; }
+    transition: all 0.1s ease; }
   .pillSolid:active {
     background: #0b3d46;
     color: #f6f6f6; }
@@ -402,12 +410,12 @@ template {
   color: #1c9eb4;
   border: 2px solid #1c9eb4;
   border-radius: 2em;
-  border-radius: 2em;
-  padding: .5em 1em; }
+  padding: .3em 3em;
+  font-size: .7em; }
   .pillOutline:hover {
     background: #1c9eb4;
     color: #f6f6f6;
-    transition: all 0.3s ease; }
+    transition: all 0.1s ease; }
   .pillOutline:active {
     background: #1c9eb4;
     color: #f6f6f6; }
@@ -424,7 +432,7 @@ template {
   .roundSolid:hover {
     background: #177f91;
     color: #f6f6f6;
-    transition: all 0.3s ease; }
+    transition: all 0.1s ease; }
   .roundSolid:active {
     background: #0b3d46;
     color: #f6f6f6; }
@@ -441,7 +449,56 @@ template {
   .roundOutline:hover {
     background: #1c9eb4;
     color: #f6f6f6;
-    transition: all 0.3s ease; }
+    transition: all 0.1s ease; }
   .roundOutline:active {
     background: #1c9eb4;
     color: #f6f6f6; }
+
+/* Form */
+form {
+  padding: 10px;
+  margin: 2rem; }
+
+.form-control {
+  width: 100%;
+  background-color: #282e34 !important;
+  color: #b1bac3 !important;
+  border: none;
+  border-bottom: 2px solid #3e4851;
+  border-radius: 0rem;
+  display: block;
+  padding: .5rem .75rem;
+  font-size: 1.5rem;
+  line-height: 1.25; }
+  .form-control:focus {
+    border-color: transparent;
+    background-color: #3e4851 !important;
+    color: #b1bac3 !important; }
+  .form-control:active {
+    background-color: #3e4851;
+    border-bottom: 2px solid transparent; }
+  .form-control::placeholder {
+    color: #54616e; }
+
+/* Submit */
+.btnSubmit {
+  background: transparent;
+  color: #1c9eb4;
+  border: 2px solid #1c9eb4;
+  border-radius: 2em;
+  padding: .5em 3em;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  width: 100%; }
+  .btnSubmit:hover {
+    background: #1c9eb4;
+    color: #f6f6f6;
+    transition: all 0.1s ease; }
+  .btnSubmit:active {
+    background: #1c9eb4;
+    color: #f6f6f6; }
+
+/* Contents */
+header, footer {
+  height: 3rem;
+  background: #1c9eb4; }

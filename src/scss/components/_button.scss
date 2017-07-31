@@ -1,3 +1,9 @@
+button{
+  &:active{
+    outline: none;
+    border: none;
+  }
+}
 @mixin btnSolid($bg, $color) {
   background: $bg;
   color: $color;
@@ -5,7 +11,7 @@
   &:hover {
     background:darken($bg,8%);
     color: $color;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
   }
   &:active {
     background:darken($bg,25%);
@@ -20,10 +26,11 @@
   &:hover {
     background: $bg;
     color: $color;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
   }
   &:active {
     background: $bg;
     color: $color;
   } 
 }
+
