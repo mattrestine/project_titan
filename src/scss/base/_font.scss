@@ -1,7 +1,39 @@
 //Sources/Url
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
 
-//Fonts
+
+// @font-face {
+// 	font-family: 'Montserrat';
+// 	src: url('/src/font/MontserratRegular.eot');
+//     src: url('/src/font/MontserratRegular.eot?#iefix') format('embedded-opentype'), 
+//          url('/src/font/MontserratRegular.woff') format('woff'),
+// 	     url('/src/font/MontserratRegular.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: 'Montserrat';
+// 	src: url('/src/font/MontserratBold.eot');
+// 	src: url('/src/font/MontserratBold.eot?#iefix') format('embedded-opentype'),
+// 	     url('/src/font/MontserratBold.woff') format('woff'),
+// 	     url('/src/font/MontserratBold.ttf') format('truetype');
+// 	font-weight: bold;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: 'MontserratSemiBold';
+// 	src: url('/src/font/MontserratSemiBold.eot');
+// 	src: url('/src/font/MontserratSemiBold.eot?#iefix') format('embedded-opentype'),
+// 	     url('/src/font/MontserratSemiBold.woff') format('woff'),
+// 	     url('/src/font/MontserratSemiBold.ttf') format('truetype');
+// 	font-weight: 600;
+// 	font-style: normal;
+// }
+
+
+
 * { font-family: 'Montserrat', arial, sans-serif !important; }
 
 

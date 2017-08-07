@@ -1,5 +1,6 @@
-@import "./base/baseAll";
-@import "./components/compAll";
+@import "./base/baseAll"; //scss for basic requirements. 
+@import "./components/compAll"; // scss for components
+//@import "./bootstrap4/bootstrap"; //scss for pages and sections
 //--------------------------------------
 
 /* General */
@@ -93,4 +94,69 @@ form{
 header, footer{
     height: 3rem;
     background: $secondary;
+}
+
+// #landingIntro{
+//     padding: 3rem 0;
+//     h3{
+//         text-align: center;
+//         padding: 1rem 0;
+//         span{
+//             color: $secondary;
+//             font-weight: 600;
+//         }
+//     }
+//     #landingLogo{
+//          display: flex;
+//          justify-content: center;
+//         img{
+//             height: 200px;
+//         }
+//     }
+// }
+
+#landingIntro{
+    width: 100%;
+    padding: 3rem 0;
+     .item{
+        h3.textIntro{
+            text-align: center;
+            padding: 1rem 0;
+            font-size: .5 !important;
+            span{
+                color: $secondary;
+                font-weight: 600;
+            }  
+        }
+        img{
+            display: flex;
+            height: 200px;
+            margin: 0 auto;
+        }
+    }
+   
+}
+
+
+.green{
+    background: green;
+}
+
+.red{
+    background: red;
+}
+
+.blue{
+    background: blue;
+}
+
+@media screen and (min-width: 800px) {
+    #landingIntro{
+     .item{
+        img{
+            height: 400px;
+        }
+    }
+   
+    }
 }
