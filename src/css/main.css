@@ -514,6 +514,24 @@ header, footer {
   height: 3rem;
   background: #1c9eb4; }
 
+/* Landing Section */
+.bgImgSection {
+  background-color: #282e34;
+  color: #f6f6f6; }
+
+.bgImgSection:before {
+  background: url("../img/landing_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 105%;
+  opacity: 0.4; }
+
 #landingIntro {
   width: 100%;
   padding: 3rem 0; }
