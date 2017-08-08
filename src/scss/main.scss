@@ -25,7 +25,7 @@ hr{
 .pillOutline{
     @include btnOutline($secondary, $white);
     border-radius: 2em;
-    padding: .3em 3em;
+    padding: .7em 3em;
     font-size: .7em;
 }
 
@@ -119,10 +119,10 @@ header, footer{
     width: 100%;
     padding: 3rem 0;
      .item{
-        h3.textIntro{
+        h3{
             text-align: center;
             padding: 1rem 0;
-            font-size: .5 !important;
+            font-size: 1.3rem !important;
             span{
                 color: $secondary;
                 font-weight: 600;
@@ -130,31 +130,48 @@ header, footer{
         }
         img{
             display: flex;
-            height: 200px;
+            height: 150px;
             margin: 0 auto;
         }
+
     }
+    #landingBtn{
+        padding-top: 4rem;
+        .btnItem{
+            padding: 1.5rem 0;
+            display: block;
+            text-align: center !important; 
+            a{
+                font-size: 1.1rem !important;
+            }
+        }
+
+    }
+    
    
 }
 
+.blankAnchor{
+   &:hover{
+       color: $secondary;
+   }
+   &:focus{
+       color: lighten($secondary, 30%);
+   } 
+}
+.red{
+    background: red
+}
 
 .green{
     background: green;
-}
-
-.red{
-    background: red;
-}
-
-.blue{
-    background: blue;
 }
 
 @media screen and (min-width: 800px) {
     #landingIntro{
      .item{
         img{
-            height: 400px;
+            height: 200px;
         }
     }
    

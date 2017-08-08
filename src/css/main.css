@@ -421,7 +421,7 @@ hr {
   color: #1c9eb4;
   border: 2px solid #1c9eb4;
   border-radius: 2em;
-  padding: .3em 3em;
+  padding: .7em 3em;
   font-size: .7em; }
   .pillOutline:hover {
     background: #1c9eb4;
@@ -517,27 +517,38 @@ header, footer {
 #landingIntro {
   width: 100%;
   padding: 3rem 0; }
-  #landingIntro .item h3.textIntro {
+  #landingIntro .item h3 {
     text-align: center;
     padding: 1rem 0;
-    font-size: .5 !important; }
-    #landingIntro .item h3.textIntro span {
+    font-size: 1.3rem !important; }
+    #landingIntro .item h3 span {
       color: #1c9eb4;
       font-weight: 600; }
   #landingIntro .item img {
     display: flex;
-    height: 200px;
+    height: 150px;
     margin: 0 auto; }
+  #landingIntro #landingBtn {
+    padding-top: 4rem; }
+    #landingIntro #landingBtn .btnItem {
+      padding: 1.5rem 0;
+      display: block;
+      text-align: center !important; }
+      #landingIntro #landingBtn .btnItem a {
+        font-size: 1.1rem !important; }
 
-.green {
-  background: green; }
+.blankAnchor:hover {
+  color: #1c9eb4; }
+
+.blankAnchor:focus {
+  color: #7edbeb; }
 
 .red {
   background: red; }
 
-.blue {
-  background: blue; }
+.green {
+  background: green; }
 
 @media screen and (min-width: 800px) {
   #landingIntro .item img {
-    height: 400px; } }
+    height: 200px; } }
