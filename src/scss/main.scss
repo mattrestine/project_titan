@@ -1,7 +1,13 @@
-@import "./base/baseAll"; //scss for basic requirements. 
-@import "./components/compAll"; // scss for components
-//@import "./bootstrap4/bootstrap"; //scss for pages and sections
-//--------------------------------------
+//configurations
+@import "base/variable";
+@import "base/normalize";
+@import "base/reset";
+
+//components
+@import "components/button";
+@import "components/font";   //Need fix to set direct files. 
+
+//*************************************
 
 /* General */
 .bgSection{
@@ -178,3 +184,4 @@ header, footer{
    
     }
 }
+
