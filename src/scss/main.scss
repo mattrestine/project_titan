@@ -5,8 +5,9 @@
 
 //components
 @import "components/button";
-@import "components/font";   //Need fix to set direct files. 
-
+@import "components/fonts";   //Need fix to set direct files. 
+@import "components/logo";
+@import "components/form";
 //*************************************
 
 /* General */
@@ -15,95 +16,29 @@
     color: $white;
 }
 
-hr{
-    background:lighten($primary, 20%);
-}
-
-
-/* Buttons */
-.pillSolid {
-    @include btnSolid($secondary, $white);
-    border-radius: 2em;
-    padding: .5em 3em;
-    font-size: .7em;
-}
-
-.pillOutline{
-    @include btnOutline($secondary, $white);
-    border-radius: 2em;
-    padding: .7em 3em;
-    font-size: .7em;
-}
-
-.roundSolid {
-    @include btnSolid($secondary, $white);
-    border-radius: 5em;
-    height: 5em;
-    width: 5em;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-.roundOutline{
-    @include btnOutline($secondary, $white);
-    border-radius: 5em;
-    height: 5em;
-    width: 5em;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-
-/* Form */
-form{
-    padding: 10px;
-    margin: 2rem;
-}
-.form-control{
-    width: 100%;
-    background-color: $primary !important;
-    color: lighten($primary, 55%) !important;
-    border: none;
-    border-bottom: 2px solid lighten($primary, 10%);
-    border-radius: 0rem;
-    display: block;
-    padding: .5rem .75rem;
-    font-size: 1.5rem;
-    line-height: 1.25;
-    &:focus{
-        border-color: transparent;
-        background-color: lighten($primary, 10%) !important;
-        color: lighten($primary, 55%) !important;
-    }
-    &:active{
-        background-color: lighten($primary, 10%);
-        border-bottom: 2px solid transparent;
-    }
-    &::placeholder{
-        color: lighten($primary, 20%);
-    }
-
-}
-
-/* Submit */
-.btnSubmit {
-    @include btnOutline($secondary, $white);
-    border-radius: 2em;
-    padding: .5em 3em;
-    font-size: 1.5rem;
-    line-height: 1.25;
-    width: 100%;
-}
-
 /* Contents */
-
 header, footer{
     height: 3rem;
     background: $secondary;
 }
 
+/* Horizonal Rules*/
+hr{
+    background:lighten($primary, 20%);
+}
 
-/* Landing Section */
+/* Example Section - Button Submit */
+.btnSubmit {
+    @include btnOutline($secondary, $white, 2em);
+    padding: .5em 3em;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    width: 100%;
+}
+
+/*********************/
+/*  Landing Section  */
+/********************/
 .bgImgSection{
     background-color: $primary;
     color: $white;
@@ -121,26 +56,9 @@ header, footer{
     height: 105%;
     opacity: 0.4;
 }
-
 #landingIntro{
     width: 100%;
     padding: 3rem 0;
-     .item{
-        h3{
-            text-align: center;
-            padding: 1rem 0;
-            font-size: 1.3rem !important;
-            span{
-                color: $secondary;
-                font-weight: 600;
-            }  
-        }
-        img{
-            display: flex;
-            height: 150px;
-            margin: 0 auto;
-        }
-
     }
     #landingBtn{
         padding-top: 4rem;
@@ -152,10 +70,16 @@ header, footer{
                 font-size: 1.1rem !important;
             }
         }
-
     }
-    
-   
+/*****************************/
+/*  Login-Register Section  */
+/***************************/
+#loginRegister{
+  margin: 2rem 0;
+}
+.btn-group{
+    margin: 2rem 0;
+    width: 100%;
 }
 
 .blankAnchor{
@@ -166,22 +90,8 @@ header, footer{
        color: lighten($secondary, 30%);
    } 
 }
-.red{
-    background: red
-}
-
-.green{
-    background: green;
-}
 
 @media screen and (min-width: 800px) {
-    #landingIntro{
-     .item{
-        img{
-            height: 200px;
-        }
-    }
-   
-    }
+
 }
 

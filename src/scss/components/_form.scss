@@ -1,0 +1,38 @@
+/* Form */
+form{
+    padding: 10px;
+    margin: 2rem;
+}
+#formSet{
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.form-group{
+    margin-bottom: 2rem;
+}
+
+.form-control{
+    width: 100%;
+    background-color: $primary !important;
+    color: lighten($primary, 55%) !important;
+    border: none;
+    border-bottom: 2px solid lighten($primary, 10%);
+    border-radius: 0rem;
+    display: block;
+    padding: .5rem .75rem;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    &:focus{
+        border-color: transparent;
+        background-color: lighten($primary, 10%) !important;
+        color: lighten($primary, 55%) !important;
+    }
+    &:active{
+        background-color: lighten($primary, 10%);
+        border-bottom: 2px solid transparent;
+    }
+    &::placeholder{
+        color: lighten($primary, 20%);
+    }
+}

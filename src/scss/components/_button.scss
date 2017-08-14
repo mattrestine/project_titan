@@ -4,10 +4,15 @@ button{
     border: none;
   }
 }
-@mixin btnSolid($bg, $color) {
+@mixin btnSolid($bg, $color, $radius) {
   background: $bg;
   color: $color;
   border: none;
+  border-radius: $radius;
+  padding: .5em 3em;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  width: 100%;
   &:hover {
     background:darken($bg,8%);
     color: $color;
@@ -19,10 +24,15 @@ button{
   } 
 }
 
-@mixin btnOutline($bg, $color) {
+@mixin btnOutline($bg, $color, $radius) {
   background: transparent;
   color: $bg;
   border: 2px solid $bg;
+  border-radius: $radius;
+  padding: .5em 3em;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  width: 100%;
   &:hover {
     background: $bg;
     color: $color;
@@ -34,3 +44,39 @@ button{
   } 
 }
 
+/** Pill Buttons **/
+.pillSolid {
+  @include btnSolid($secondary, $white, 2em);
+}
+
+.pillOutline{
+  @include btnOutline($secondary, $white, 2em);
+  font-size: .7em;
+}
+
+/** Round Buttons **/
+.roundSolid {
+  @include btnSolid($secondary, $white, 5em);
+  height: 5em;
+  width: 5em;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.roundOutline{
+  @include btnOutline($secondary, $white, 5em);
+  height: 5em;
+  width: 5em;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/** Facebook Button **/
+.btnFb{
+  @include btnSolid($fbBlue, $white, 2rem);
+}
+
+/** Google Plus Button **/
+.btnGoogle{
+  @include btnSolid($GoogleRed, $white, 2rem);
+}

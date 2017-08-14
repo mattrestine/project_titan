@@ -391,25 +391,16 @@ button:active {
   outline: none;
   border: none; }
 
-* {
-  font-family: 'Montserrat', arial, sans-serif !important; }
-
-/* General */
-.bgSection {
-  background-color: #282e34;
-  color: #f6f6f6; }
-
-hr {
-  background: #54616e; }
-
-/* Buttons */
+/** Pill Buttons **/
 .pillSolid {
   background: #1c9eb4;
   color: #f6f6f6;
   border: none;
   border-radius: 2em;
   padding: .5em 3em;
-  font-size: .7em; }
+  font-size: 1.5rem;
+  line-height: 1.25;
+  width: 100%; }
   .pillSolid:hover {
     background: #177f91;
     color: #f6f6f6;
@@ -423,7 +414,10 @@ hr {
   color: #1c9eb4;
   border: 2px solid #1c9eb4;
   border-radius: 2em;
-  padding: .7em 3em;
+  padding: .5em 3em;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  width: 100%;
   font-size: .7em; }
   .pillOutline:hover {
     background: #1c9eb4;
@@ -433,11 +427,16 @@ hr {
     background: #1c9eb4;
     color: #f6f6f6; }
 
+/** Round Buttons **/
 .roundSolid {
   background: #1c9eb4;
   color: #f6f6f6;
   border: none;
   border-radius: 5em;
+  padding: .5em 3em;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  width: 100%;
   height: 5em;
   width: 5em;
   font-size: 1em;
@@ -455,6 +454,10 @@ hr {
   color: #1c9eb4;
   border: 2px solid #1c9eb4;
   border-radius: 5em;
+  padding: .5em 3em;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  width: 100%;
   height: 5em;
   width: 5em;
   font-size: 1em;
@@ -467,10 +470,86 @@ hr {
     background: #1c9eb4;
     color: #f6f6f6; }
 
+/** Facebook Button **/
+.btnFb {
+  background: #4c70ba;
+  color: #f6f6f6;
+  border: none;
+  border-radius: 2rem;
+  padding: .5em 3em;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  width: 100%; }
+  .btnFb:hover {
+    background: #3e5ea0;
+    color: #f6f6f6;
+    transition: all 0.1s ease; }
+  .btnFb:active {
+    background: #253961;
+    color: #f6f6f6; }
+
+/** Google Plus Button **/
+.btnGoogle {
+  background: #c23321;
+  color: #f6f6f6;
+  border: none;
+  border-radius: 2rem;
+  padding: .5em 3em;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  width: 100%; }
+  .btnGoogle:hover {
+    background: #9f2a1b;
+    color: #f6f6f6;
+    transition: all 0.1s ease; }
+  .btnGoogle:active {
+    background: #55160e;
+    color: #f6f6f6; }
+
+* {
+  font-family: 'Montserrat', arial, sans-serif !important; }
+
+#logoMed img {
+  display: flex;
+  height: 150px;
+  margin: 0 auto; }
+
+#logoMed h3 {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.3rem !important; }
+  #logoMed h3 span {
+    color: #1c9eb4;
+    font-weight: 600; }
+
+#logoSm img {
+  display: flex;
+  height: 100px;
+  margin: 0 auto; }
+
+#logoSm h3 {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.3rem !important; }
+  #logoSm h3 span {
+    color: #1c9eb4;
+    font-weight: 600; }
+
+@media screen and (min-width: 800px) {
+  #logo img {
+    height: 200px; } }
+
 /* Form */
 form {
   padding: 10px;
   margin: 2rem; }
+
+#formSet {
+  width: 50%;
+  margin: 1rem auto; }
+
+.form-group {
+  margin-bottom: 2rem; }
 
 .form-control {
   width: 100%;
@@ -493,12 +572,30 @@ form {
   .form-control::placeholder {
     color: #54616e; }
 
-/* Submit */
+/* General */
+.bgSection {
+  background-color: #282e34;
+  color: #f6f6f6; }
+
+/* Contents */
+header, footer {
+  height: 3rem;
+  background: #1c9eb4; }
+
+/* Horizonal Rules*/
+hr {
+  background: #54616e; }
+
+/* Example Section - Button Submit */
 .btnSubmit {
   background: transparent;
   color: #1c9eb4;
   border: 2px solid #1c9eb4;
   border-radius: 2em;
+  padding: .5em 3em;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  width: 100%;
   padding: .5em 3em;
   font-size: 1.5rem;
   line-height: 1.25;
@@ -511,12 +608,9 @@ form {
     background: #1c9eb4;
     color: #f6f6f6; }
 
-/* Contents */
-header, footer {
-  height: 3rem;
-  background: #1c9eb4; }
-
-/* Landing Section */
+/*********************/
+/*  Landing Section  */
+/********************/
 .bgImgSection {
   background-color: #282e34;
   color: #f6f6f6; }
@@ -537,38 +631,28 @@ header, footer {
 #landingIntro {
   width: 100%;
   padding: 3rem 0; }
-  #landingIntro .item h3 {
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 1.3rem !important; }
-    #landingIntro .item h3 span {
-      color: #1c9eb4;
-      font-weight: 600; }
-  #landingIntro .item img {
-    display: flex;
-    height: 150px;
-    margin: 0 auto; }
-  #landingIntro #landingBtn {
-    padding-top: 4rem; }
-    #landingIntro #landingBtn .btnItem {
-      padding: 1.5rem 0;
-      display: block;
-      text-align: center !important; }
-      #landingIntro #landingBtn .btnItem a {
-        font-size: 1.1rem !important; }
+
+#landingBtn {
+  padding-top: 4rem; }
+  #landingBtn .btnItem {
+    padding: 1.5rem 0;
+    display: block;
+    text-align: center !important; }
+    #landingBtn .btnItem a {
+      font-size: 1.1rem !important; }
+
+/*****************************/
+/*  Login-Register Section  */
+/***************************/
+#loginRegister {
+  margin: 2rem 0; }
+
+.btn-group {
+  margin: 2rem 0;
+  width: 100%; }
 
 .blankAnchor:hover {
   color: #1c9eb4; }
 
 .blankAnchor:focus {
   color: #7edbeb; }
-
-.red {
-  background: red; }
-
-.green {
-  background: green; }
-
-@media screen and (min-width: 800px) {
-  #landingIntro .item img {
-    height: 200px; } }

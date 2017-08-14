@@ -1,0 +1,43 @@
+@mixin logo($height){
+    display: flex;
+    height: $height;
+    margin: 0 auto;
+}
+
+#logoMed{
+    img{
+        @include logo(150px);
+    }
+    h3{
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1.3rem !important;
+        span{
+            color: $secondary;
+            font-weight: 600;
+        } 
+    }
+}
+
+#logoSm{
+    img{
+        @include logo(100px);
+    }
+    h3{
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1.3rem !important;
+        span{
+            color: $secondary;
+            font-weight: 600;
+        } 
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #logo{
+        img{
+            height: 200px;
+        }
+    }
+}
